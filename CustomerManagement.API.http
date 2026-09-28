@@ -1,0 +1,44 @@
+@CustomerManagement.API_HostAddress = http://localhost:5019
+
+### Get all customers
+GET {{CustomerManagement.API_HostAddress}}/customers
+Accept: application/json
+
+###
+
+### Get customer by ID
+GET {{CustomerManagement.API_HostAddress}}/customers/1
+Accept: application/json
+
+###
+
+### Create customer
+POST {{CustomerManagement.API_HostAddress}}/customers
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Charlie Brown",
+  "email": "charlie@example.com",
+  "phone": "555-0103"
+}
+
+###
+
+### Update customer
+PUT {{CustomerManagement.API_HostAddress}}/customers/1
+Content-Type: application/json
+
+{
+  "name": "Alice Cooper",
+  "email": "alice.cooper@example.com",
+  "phone": "555-9999"
+}
+
+###
+
+### Delete customer
+DELETE {{CustomerManagement.API_HostAddress}}/customers/1
+
+###
+
